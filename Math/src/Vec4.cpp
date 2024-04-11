@@ -173,12 +173,12 @@ namespace Azul
 		return Vec4((_vx * inverseMag), (_vy * inverseMag), (_vz * inverseMag), (_vw * inverseMag));
 	}
 
-	/*const*/ float Azul::Vec4::dot(const Vec4& vIn) const
+	float Azul::Vec4::dot(const Vec4& vIn) const
 	{
 		return ((_vx * vIn._vx) + (_vy * vIn._vy) + (_vz * vIn._vz) + (_vw * vIn._vw));
 	}
 
-	/*const*/ float Azul::Vec4::len() const
+	float Azul::Vec4::len() const
 	{
 		return Trig::sqrt((_vx * _vx) + (_vy * _vy) + (_vz * _vz) + (_vw * _vw));
 	}
