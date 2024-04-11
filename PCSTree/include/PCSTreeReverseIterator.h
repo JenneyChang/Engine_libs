@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef PCSTREE_REVERSE_ITERATOR_H
 #define PCSTREE_REVERSE_ITERATOR_H
 
@@ -21,8 +17,6 @@ namespace Azul
 		virtual PCSNode *CurrentItem() override;
 
 	private:
-		// YOU can store what you want... here
-		// these were my variables...
 		PCSNode *root;		//basically end of rev tree
 		PCSNode *current;
 		PCSNode *prevNode;
