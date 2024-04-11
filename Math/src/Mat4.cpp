@@ -506,26 +506,6 @@ namespace Azul
 		mout.privSetNewHint(hA, hB);
 
 		return mout;
-
-		/*return Mat4(Vec4((_m0 * A._m0) + (_m1 * A._m4) + (_m2 * A._m8) + (_m3 * A._m12),
-						 (_m0 * A._m1) + (_m1 * A._m5) + (_m2 * A._m9) + (_m3 * A._m13),
-						 (_m0 * A._m2) + (_m1 * A._m6) + (_m2 * A._m10) + (_m3 * A._m14),
-						 (_m0 * A._m3) + (_m1 * A._m7) + (_m2 * A._m11) + (_m3 * A._m15)),
-
-					Vec4((_m4 * A._m0) + (_m5 * A._m4) + (_m6 * A._m8) + (_m7 * A._m12),
-						 (_m4 * A._m1) + (_m5 * A._m5) + (_m6 * A._m9) + (_m7 * A._m13),
-						 (_m4 * A._m2) + (_m5 * A._m6) + (_m6 * A._m10) + (_m7 * A._m14),
-						 (_m4 * A._m3) + (_m5 * A._m7) + (_m6 * A._m11) + (_m7 * A._m15)),
-
-					Vec4((_m8 * A._m0) + (_m9 * A._m4) + (_m10 * A._m8) +  (_m11 * A._m12),
-						 (_m8 * A._m1) + (_m9 * A._m5) + (_m10 * A._m9) +  (_m11 * A._m13),
-						 (_m8 * A._m2) + (_m9 * A._m6) + (_m10 * A._m10) + (_m11 * A._m14),
-						 (_m8 * A._m3) + (_m9 * A._m7) + (_m10 * A._m11) + (_m11 * A._m15)),
-			
-					Vec4((_m12 * A._m0) + (_m13 * A._m4) + (_m14 * A._m8) +  (_m15 * A._m12),
-						 (_m12 * A._m1) + (_m13 * A._m5) + (_m14 * A._m9) +  (_m15 * A._m13),
-						 (_m12 * A._m2) + (_m13 * A._m6) + (_m14 * A._m10) + (_m15 * A._m14),
-						 (_m12 * A._m3) + (_m13 * A._m7) + (_m14 * A._m11) + (_m15 * A._m15)));*/
 	}
 
 	void Azul::Mat4::operator*=(const Mat4& A)
@@ -577,7 +557,7 @@ namespace Azul
 	//	MAT4 FUNCTIONS
 	//-----------------------------------------------------------------------------
 
-	/*const*/ float Azul::Mat4::det() const
+	/float Azul::Mat4::det() const
 	{
 		Mat3 A(Vec3(_m5, _m6, _m7), Vec3(_m9, _m10, _m11), Vec3(_m13, _m14, _m15));
 		Mat3 B(Vec3(_m4, _m6, _m7), Vec3(_m8, _m10, _m11), Vec3(_m12, _m14, _m15));
@@ -655,7 +635,7 @@ namespace Azul
 		return *this = det * adj;
 	}
 
-	/*const*/ bool Azul::Mat4::isEqual(const Mat4& A, const float epsilon) const
+	bool Azul::Mat4::isEqual(const Mat4& A, const float epsilon) const
 	{
 		return (Util::isEqual(_m0, A._m0, epsilon) &&
 				Util::isEqual(_m1, A._m1, epsilon) &&
@@ -678,7 +658,7 @@ namespace Azul
 				Util::isEqual(_m15, A._m15, epsilon));
 	}
 
-	/*const*/ bool Azul::Mat4::isIdentity(const float epsilon) const
+	bool Azul::Mat4::isIdentity(const float epsilon) const
 	{
 		return (Util::isOne(_m0, epsilon)  &&
 				Util::isZero(_m1, epsilon) &&
@@ -701,7 +681,7 @@ namespace Azul
 				Util::isOne(_m15, epsilon));
 	}
 
-	/*const*/ bool Azul::Mat4::isRotation(const float epsilon) const
+	bool Azul::Mat4::isRotation(const float epsilon) const
 	{
 		//Mat4 * Mat4_Transpose = Identity (true -- is rotation)
 		Mat4 mOut(*this * this->getT());
