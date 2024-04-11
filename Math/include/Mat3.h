@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef ENGINE_MATH_MATRIX_3x3_H
 #define ENGINE_MATH_MATRIX_3x3_H
 
@@ -31,9 +27,6 @@ namespace Azul
 		};
 
 	public:
-
-		// Do your magic here
-
 		// Big 4
 		Mat3();
 		~Mat3();
@@ -67,17 +60,17 @@ namespace Azul
 		float& operator[] (const enum m9_enum) { return this->_m9; }
 		float& operator[] (const enum m10_enum) { return this->_m10; }
 
-		/*const*/ float operator[] (const enum m0_enum) const { return this->_m0; }
-		/*const*/ float operator[] (const enum m1_enum) const { return this->_m1; }
-		/*const*/ float operator[] (const enum m2_enum) const { return this->_m2; }
+		float operator[] (const enum m0_enum) const { return this->_m0; }
+		float operator[] (const enum m1_enum) const { return this->_m1; }
+		float operator[] (const enum m2_enum) const { return this->_m2; }
 
-		/*const*/ float operator[] (const enum m4_enum) const { return this->_m4; }
-		/*const*/ float operator[] (const enum m5_enum) const { return this->_m5; }
-		/*const*/ float operator[] (const enum m6_enum) const { return this->_m6; }
+		float operator[] (const enum m4_enum) const { return this->_m4; }
+		float operator[] (const enum m5_enum) const { return this->_m5; }
+		float operator[] (const enum m6_enum) const { return this->_m6; }
 
-		/*const*/ float operator[] (const enum m8_enum) const { return this->_m8; }
-		/*const*/ float operator[] (const enum m9_enum) const { return this->_m9; }
-		/*const*/ float operator[] (const enum m10_enum) const { return this->_m10; }
+		float operator[] (const enum m8_enum) const { return this->_m8; }
+		float operator[] (const enum m9_enum) const { return this->_m9; }
+		float operator[] (const enum m10_enum) const { return this->_m10; }
 
 		// Accessor	
 		void m0(const float v) { this->_m0 = v; }
@@ -92,20 +85,20 @@ namespace Azul
 		void m9(const float v)	{ this->_m9	= v;}
 		void m10(const float v) { this->_m10 = v;}
 
-		/*const*/ float m0() const { return this->_m0; }
-		/*const*/ float m1() const { return this->_m1; }
-		/*const*/ float m2() const { return this->_m2; }
+		float m0() const { return this->_m0; }
+		float m1() const { return this->_m1; }
+		float m2() const { return this->_m2; }
 
-		/*const*/ float m4() const { return this->_m4; }
-		/*const*/ float m5() const { return this->_m5; }
-		/*const*/ float m6() const { return this->_m6; }
+		float m4() const { return this->_m4; }
+		float m5() const { return this->_m5; }
+		float m6() const { return this->_m6; }
 
-		/*const*/ float m8() const { return this->_m8; }
-		/*const*/ float m9() const { return this->_m9; }
-		/*const*/ float m10() const { return this->_m10; }
+		float m8() const { return this->_m8; }
+		float m9() const { return this->_m9; }
+		float m10() const { return this->_m10; }
 
 		// Determinant
-		/*const*/ float det() const;
+		float det() const;
 		
 		// Transpose
 		Mat3 &T(void);
