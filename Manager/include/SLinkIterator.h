@@ -7,11 +7,12 @@
 class SLinkIterator : public Iterator
 {
 public:
+	// data
 	Node* pHead;
 	Node* pCurr;
 	bool done;
 
-	//deleted 
+	//disabled
 	SLinkIterator(const SLinkIterator&) = delete;
 	SLinkIterator& operator=(const SLinkIterator&) = delete;
 
