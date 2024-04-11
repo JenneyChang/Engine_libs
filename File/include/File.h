@@ -1,7 +1,3 @@
-//--------------------------------------------------------------
-// Copyright 2021, Ed Keenan, all rights reserved.
-//--------------------------------------------------------------
-
 #ifndef FILE_H
 #define FILE_H
 
@@ -51,10 +47,6 @@ namespace Azul
 		static File::Error Tell(File::Handle fh, DWORD& offset) noexcept;
 		static File::Error Flush(File::Handle fh) noexcept;
 		static bool IsHandleValid(File::Handle fh) noexcept;
-
-	private:
-	/*	static DWORD privGetFileDesiredAccess(File::Mode mode) noexcept;
-		static DWORD privGetSeek(File::Position location) noexcept;*/
 	};
 
 }
