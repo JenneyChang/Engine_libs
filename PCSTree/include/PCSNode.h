@@ -26,10 +26,10 @@ namespace Azul
 
 
 	public:
-		PCSNode();								// constructor
-		virtual ~PCSNode();						// destructor
-		PCSNode(const PCSNode &in);				// copy constructor
-		PCSNode& operator=(const PCSNode& in);	// assignment operator
+		PCSNode();					// constructor
+		virtual ~PCSNode();				// destructor
+		PCSNode(const PCSNode &in);			// copy constructor
+		PCSNode& operator=(const PCSNode& in);		// assignment operator
 
 		// Specialize Constructor
 		PCSNode(const char* const pInName);
