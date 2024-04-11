@@ -7,7 +7,7 @@ namespace Azul
 	//----------------------------------------------------------------------------------
 
 	PCSTreeForwardIterator::PCSTreeForwardIterator(PCSNode* rootNode)
-		: root(rootNode), current(nullptr)/*, done(false)*/
+		: root(rootNode), current(nullptr)
 	{ 
 		assert(rootNode);
 	}
@@ -21,12 +21,10 @@ namespace Azul
 	{
 		if (this->root != nullptr)
 		{
-			//this->done = false;
 			this->current = this->root;
 		}
 		else
 		{
-			//this->done = true;
 			this->root = nullptr;
 			this->current = nullptr;
 		}
