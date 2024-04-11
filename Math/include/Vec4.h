@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef ENGINE_MATH_Vect4D_H
 #define ENGINE_MATH_Vect4D_H
 
@@ -59,10 +55,10 @@ namespace Azul
 		float& operator[] (const enum z_enum) { return this->_vz; }
 		float& operator[] (const enum w_enum) { return this->_vw; }
 
-		/*const*/ float operator[] (const enum x_enum) const { return this->_vx; }
-		/*const*/ float operator[] (const enum y_enum) const { return this->_vy; }
-		/*const*/ float operator[] (const enum z_enum) const { return this->_vz; }
-		/*const*/ float operator[] (const enum w_enum) const { return this->_vw; }
+		float operator[] (const enum x_enum) const { return this->_vx; }
+		float operator[] (const enum y_enum) const { return this->_vy; }
+		float operator[] (const enum z_enum) const { return this->_vz; }
+		float operator[] (const enum w_enum) const { return this->_vw; }
 
 		// Accessors - Robin's suggestion
 		void x(const float v) { this->_vx = v; }
@@ -70,10 +66,10 @@ namespace Azul
 		void z(const float v) { this->_vz = v; }
 		void w(const float v) { this->_vw = v; }
 
-		/*const*/ float x()const { return this->_vx; }
-		/*const*/ float y()const { return this->_vy; }
-		/*const*/ float z()const { return this->_vz; }
-		/*const*/ float w()const { return this->_vw; }
+		float x()const { return this->_vx; }
+		float y()const { return this->_vy; }
+		float z()const { return this->_vz; }
+		float w()const { return this->_vw; }
 
 		// add operators
 		Vec4 operator+ (void) const;
@@ -95,15 +91,15 @@ namespace Azul
 		Vec4 operator*= (const Mat4 &m);
 
 		//(Vec3,1) * Mat4
-        friend Vec4 operator*(const Vec3 &v, const Mat4 &m);
-        friend Vec4 operator*= (const Vec3 &v, const Mat4 &m);
+        	friend Vec4 operator*(const Vec3 &v, const Mat4 &m);
+        	friend Vec4 operator*= (const Vec3 &v, const Mat4 &m);
 
 		// Vec4 functions
 		Vec4 &norm(void);
 		Vec4 getNorm(void) const;
-		/*const*/ float dot(const Vec4 &vIn) const;
+		float dot(const Vec4 &vIn) const;
 		//const Vec4Proxy len() const;
-		/*const*/ float len() const;
+		float len() const;
 
 		// set
 		void set(const float inX, const float inY, const float inZ, const float inW);
