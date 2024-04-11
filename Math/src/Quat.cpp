@@ -444,23 +444,23 @@ namespace Azul
 	//	QUAT FUNCTIONS 
 	//-----------------------------------------------------------------------------
 
-	/*const*/ float Azul::Quat::dot(const Quat& qin) const
+	float Azul::Quat::dot(const Quat& qin) const
 	{
 		return ((_qx * qin._qx) + (_qy * qin._qy) + (_qz * qin._qz) + (_qw * qin._qw));
 	}
 
-	/*const*/ float Quat::mag(void) const
+	float Quat::mag(void) const
 	{
 		return Trig::sqrt((_qx * _qx) + (_qy * _qy) + (_qz * _qz) + (_qw * _qw));
 	}
 
-	/*const*/ float Azul::Quat::magSquared(void) const
+	float Azul::Quat::magSquared(void) const
 	{
 		float mag = this->mag();
 		return (mag * mag);
 	}
 
-	/*const*/ float Azul::Quat::invMag(void) const
+	float Azul::Quat::invMag(void) const
 	{
 		return (1.0f / this->mag());
 	}
@@ -552,7 +552,7 @@ namespace Azul
 		vOut._vz = result._qz;
 	}
 
-	/*const*/ bool Azul::Quat::isEqual(const Quat& qin, const float epsilon) const
+	bool Azul::Quat::isEqual(const Quat& qin, const float epsilon) const
 	{
 		return (Util::isEqual(_qx, qin._qx, epsilon) && 
 				Util::isEqual(_qy, qin._qy, epsilon) &&
@@ -560,7 +560,7 @@ namespace Azul
 				Util::isEqual(_qw, qin._qw, epsilon));
 	}
 
-	/*const*/ bool Azul::Quat::isEquivalent(const Quat& qin, const float epsilon) const
+	bool Azul::Quat::isEquivalent(const Quat& qin, const float epsilon) const
 	{
 		//if qin is negative
 		if (qin._qx < 0 && qin._qy < 0 && qin._qz < 0)
@@ -574,7 +574,7 @@ namespace Azul
 		}
 	}
 
-	/*const*/ bool Azul::Quat::isNegEqual(const Quat& qin, const float epsilon) const
+	bool Azul::Quat::isNegEqual(const Quat& qin, const float epsilon) const
 	{
 		return (Util::isEqual(_qx, fabsf(qin._qx), epsilon) &&
 				Util::isEqual(_qy, fabsf(qin._qy), epsilon) &&
@@ -582,7 +582,7 @@ namespace Azul
 				Util::isEqual(_qw, fabsf(qin._qw), epsilon));
 	}
 	
-	/*const*/ bool Azul::Quat::isConjugateEqual(const Quat& qin, const float epsilon) const
+	 bool Azul::Quat::isConjugateEqual(const Quat& qin, const float epsilon) const
 	{
 		return (Util::isEqual(_qx, fabsf(qin._qx), epsilon) &&
 				Util::isEqual(_qy, fabsf(qin._qy), epsilon) &&
@@ -590,7 +590,7 @@ namespace Azul
 				Util::isEqual(_qw, qin._qw, epsilon));
 	}
 
-	/*const*/ bool Azul::Quat::isIdentity(const float epsilon) const
+	bool Azul::Quat::isIdentity(const float epsilon) const
 	{
 		return (Util::isZero(_qx, epsilon) &&
 				Util::isZero(_qy, epsilon) &&
@@ -598,12 +598,12 @@ namespace Azul
 				Util::isOne(_qw, epsilon));
 	}
 
-	/*const*/ bool Azul::Quat::isNormalized(const float epsilon) const
+	bool Azul::Quat::isNormalized(const float epsilon) const
 	{
 		return (Util::isOne(this->mag(), epsilon));
 	}
 
-	/*const*/ bool Azul::Quat::isZero(const float epsilon) const
+	bool Azul::Quat::isZero(const float epsilon) const
 	{
 		return (Util::isZero(_qx, epsilon) &&
 				Util::isZero(_qy, epsilon) &&
