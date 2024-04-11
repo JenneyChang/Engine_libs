@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef PCSTREE_FORWARD_ITERATOR_H
 #define PCSTREE_FORWARD_ITERATOR_H
 
@@ -22,12 +18,8 @@ namespace Azul
 
 
 	private:
-		// YOU can store what you want... here
-		// these were my variables...
 		PCSNode *root;
 		PCSNode *current;
-		//bool done;
-
 
 	};
 }
