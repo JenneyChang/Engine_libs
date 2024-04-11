@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef ENGINE_MATH_QUAT_H
 #define ENGINE_MATH_QUAT_H
 
@@ -60,9 +56,9 @@ namespace Azul
 	public:
 
 		// Constructors
-		explicit Quat(void);	// default Constructor 
-		~Quat(void);			// default Destructor
-		Quat(const Quat &qIn);	// copy constructor
+		explicit Quat(void);			// default Constructor 
+		~Quat(void);				// default Destructor
+		Quat(const Quat &qIn);			// copy constructor
 		const Quat& operator=(const Quat& q);	// Assignment operator
 		const Quat& operator=(const Mat4& m);	// Assignment operator
 
@@ -126,18 +122,18 @@ namespace Azul
 		void real(const float w) { this->_qw = w; }
 
 		// Get values
-		/*const*/ float operator[](const x_enum value) const { return this->_qx; }
-		/*const*/ float operator[](const y_enum value) const { return this->_qy; }
-		/*const*/ float operator[](const z_enum value) const { return this->_qz; }
-		/*const*/ float operator[](const w_enum value) const { return this->_qw; }
+		float operator[](const x_enum value) const { return this->_qx; }
+		float operator[](const y_enum value) const { return this->_qy; }
+		float operator[](const z_enum value) const { return this->_qz; }
+		float operator[](const w_enum value) const { return this->_qw; }
 
-		/*const*/ float qx()const { return this->_qx; }
-		/*const*/ float qy()const { return this->_qy; }
-		/*const*/ float qz()const { return this->_qz; }
-		/*const*/ float real()const { return this->_qw; }
+		float qx()const { return this->_qx; }
+		float qy()const { return this->_qy; }
+		float qz()const { return this->_qz; }
+		float real()const { return this->_qw; }
 
 		// Get Angle of rotation about the axis of rotation
-		/*const*/ float getAngle(void) const;
+		float getAngle(void) const;
 
 		// Get Axis of rotation
 		void getAxis(Vec3& vOut) const;
@@ -147,11 +143,11 @@ namespace Azul
 
 
 		// General member functions
-		/*const*/ float dot(const Quat &qin) const;	// dot product of two quaternions (4D)
+		float dot(const Quat &qin) const;	// dot product of two quaternions (4D)
 
-		/*const*/ float mag(void) const;		// magnitude 
-		/*const*/ float magSquared(void) const;	// magnitude Squared (Remember for Unit Quats, magSquared == 1.0f );
-		/*const*/ float invMag(void) const;		// inverse magnitude
+		float mag(void) const;		// magnitude 
+		float magSquared(void) const;	// magnitude Squared (Remember for Unit Quats, magSquared == 1.0f );
+		float invMag(void) const;		// inverse magnitude
 
 		Quat &conj(void);			// Conjugate Quat in place
 		Quat getConj(void) const;	// Return conjuate Quat
@@ -179,25 +175,25 @@ namespace Azul
 		// Test functions
 
 		// Return true if the two Quats are equal within epsilon of each other
-		/*const*/ bool isEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
+		bool isEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the two Quats are equivalent within epsilon of each other
-		/*const*/ bool isEquivalent(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
+		bool isEquivalent(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the two Quats are equal but negative in direction within epsilon of each other
-		/*const*/ bool isNegEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
+		bool isNegEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the two Quats are equal but conjugate within epsilon of each other
-		/*const*/ bool isConjugateEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
+		bool isConjugateEqual(const Quat &qin, const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the Quat represents Identity Rotation
-		/*const*/ bool isIdentity(const float epsilon = MATH_TOLERANCE) const;
+		bool isIdentity(const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the Quat is normalized
-		/*const*/ bool isNormalized(const float epsilon = MATH_TOLERANCE) const;
+		bool isNormalized(const float epsilon = MATH_TOLERANCE) const;
 
 		// Return true if the Quat is a ZERO quat
-		/*const*/ bool isZero(const float epsilon = MATH_TOLERANCE) const;
+		bool isZero(const float epsilon = MATH_TOLERANCE) const;
 
 
 		// Overload the + operator
