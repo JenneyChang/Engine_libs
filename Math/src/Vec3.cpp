@@ -181,7 +181,7 @@ namespace Azul
 		return Vec3(_vx * inverseMagnitude, _vy * inverseMagnitude, _vz * inverseMagnitude);
 	}
 
-	/*const*/ float Azul::Vec3::dot(const Vec3& vIn) const
+	float Azul::Vec3::dot(const Vec3& vIn) const
 	{
 		return ((_vx * vIn._vx) + (_vy * vIn._vy) + (_vz * vIn._vz));
 	}
@@ -198,12 +198,12 @@ namespace Azul
 		return Vec3Proxy();
 	}*/
 
-	/*const*/ float Azul::Vec3::len(void) const
+	float Azul::Vec3::len(void) const
 	{
 		return Trig::sqrt((_vx * _vx) + (_vy * _vy) + (_vz * _vz));
 	}
 
-	/*const*/ float Azul::Vec3::getAngle(const Vec3& vIn) const
+	float Azul::Vec3::getAngle(const Vec3& vIn) const
 	{
 		return Trig::acos(dot(vIn)/(len() * vIn.len()));
 	}
