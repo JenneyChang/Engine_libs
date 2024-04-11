@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 #ifndef ENGINE_MATH_VECT3_H
 #define ENGINE_MATH_VECT3_H
 
@@ -57,18 +53,18 @@ namespace Azul
 		float& operator[] (const enum y_enum) { return this->_vy; }
 		float& operator[] (const enum z_enum) { return this->_vz; }
 
-		/*const*/ float operator[] (const enum x_enum) const { return this->_vx; }
-		/*const*/ float operator[] (const enum y_enum) const { return this->_vy; }
-		/*const*/ float operator[] (const enum z_enum) const { return this->_vz; }
+		float operator[] (const enum x_enum) const { return this->_vx; }
+		float operator[] (const enum y_enum) const { return this->_vy; }
+		float operator[] (const enum z_enum) const { return this->_vz; }
 
 		// Accessors - Robin's suggestion
 		void x(const float v) { this->_vx = v; }
 		void y(const float v) { this->_vy = v; }
 		void z(const float v) { this->_vz = v; }
 
-		/*const*/ float x() const { return this->_vx; }
-		/*const*/ float y() const { return this->_vy; }
-		/*const*/ float z() const { return this->_vz; }
+		float x() const { return this->_vx; }
+		float y() const { return this->_vy; }
+		float z() const { return this->_vz; }
 
 		// add operators
 		Vec3 operator+ (void) const;
@@ -96,11 +92,11 @@ namespace Azul
 		// Vector functions
 		Vec3 &norm(void);
 		Vec3 getNorm(void) const;
-		/*const*/ float dot(const Vec3 &vIn) const;
+		float dot(const Vec3 &vIn) const;
 		const Vec3 cross(const Vec3 &vIn) const;
 		//const Vec3Proxy len(void) const;
-		/*const*/ float len(void) const;
-		/*const*/ float getAngle(const Vec3 &vIn) const;
+		float len(void) const;
+		float getAngle(const Vec3 &vIn) const;
 
 		// set
 		void set(const float inX, const float inY, const float inZ);
