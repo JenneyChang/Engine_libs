@@ -1,7 +1,3 @@
-//-----------------------------------------------------------------------------
-// Copyright 2022, Ed Keenan, all rights reserved.
-//----------------------------------------------------------------------------- 
-
 // --------------------------------
 // ---      DO NOT MODIFY       ---
 // --------------------------------
@@ -34,7 +30,7 @@ namespace Azul
 
 	constexpr const float MATH_INV_SQRT_2 = 0.707106781188f;	// constant for 1/sqrt(2) 
 
-	constexpr const float MATH_TOLERANCE = 0.001f;            // constant for internal tolerances
+	constexpr const float MATH_TOLERANCE = 0.001f;            	// constant for internal tolerances
 	constexpr const float MATH_PRINT_TOLERANCE = 1.0E-5F;
 }
 
