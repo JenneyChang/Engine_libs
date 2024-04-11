@@ -22,7 +22,6 @@ namespace Azul
 	{
 		if (root != nullptr)
 		{
-			/*this->current = GetTail();*/
 			this->current = PCSTree::pTail;
 		}
 		else
