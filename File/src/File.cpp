@@ -20,14 +20,6 @@ namespace Azul
 
 		switch (mode)
 		{
-			case File::Mode::WRITE:
-				fh = CreateFile(fileName, GENERIC_WRITE, 0, NULL, OPEN_ALWAYS, 0, NULL);
-				if (IsHandleValid(fh))
-				{
-					status =  File::Error::SUCCESS;
-				}
-			break;
-
 			case File::Mode::READ:
 				fh = CreateFile(fileName, GENERIC_READ, 0, NULL, OPEN_ALWAYS, 0, NULL);
 				if (IsHandleValid(fh))
@@ -35,7 +27,13 @@ namespace Azul
 					status = File::Error::SUCCESS;
 				}
 				break;
-
+			case File::Mode::WRITE:
+				fh = CreateFile(fileName, GENERIC_WRITE, 0, NULL, OPEN_ALWAYS, 0, NULL);
+				if (IsHandleValid(fh))
+				{
+					status =  File::Error::SUCCESS;
+				}
+			break;
 			case File::Mode::READ_WRITE:
 				fh = CreateFile(fileName, GENERIC_READ|GENERIC_WRITE, 0, NULL, OPEN_ALWAYS, 0, NULL);
 				if (IsHandleValid(fh))
